@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio de Lucas Veiga Pinheiro - Desenvolvedor Front-end em formação com projetos em HTML, CSS e JavaScript">
+    <meta name="keywords"
+        content="portfolio, desenvolvedor web, front-end, HTML, CSS, JavaScript, Lucas Veiga Pinheiro">
+    <meta name="author" content="Lucas Veiga Pinheiro">
+    <title>Lucas Veiga Pinheiro - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="imagens/favicon.svg">
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lucas Veiga Pinheiro</h1>
+        <p id="subtitilo">Desenvolvedor Front-end em Formação</p>
+        <nav id="menu" aria-label="Navegação principal">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <article>
+                <h2>Olá, eu sou Lucas</h2>
+                <p>Estudante apaixonado por desenvolvimento web, em constante aprendizado para criar experiências
+                    digitais incríveis. Busco aplicar conhecimentos em HTML, CSS e JavaScript para transformar ideias em
+                    soluções funcionais e elegantes.</p>
+                <p>Como desenvolvedor em formação, dedico-me a estudar as melhores práticas e modernas tecnologias
+                    front-end, com foco em criar interfaces responsivas e intuitivas que proporcionem ótimas
+                    experiências aos usuários.</p>
+            </article>
+        </section>
+
+        <section id="sobre">
+            <article>
+                <h2>Minha Jornada</h2>
+                <div class="sobre-conteudo">
+                    <div class="sobre-imagem">
+                        <img src="imagens/ChatGPT Image 23_02_2026, 17_07_34.png" alt="Lucas Veiga Pinheiro"
+                            loading="lazy">
+                    </div>
+                    <div class="sobre-texto">
+                        <p>Minha jornada na programação começou com curiosidade e evoluiu para uma verdadeira paixão.
+                            Como estudante dedicado, busco constantemente aprender novas tecnologias e melhores práticas
+                            para desenvolver minhas habilidades.</p>
+                        <p>Com grande interesse em design de interfaces e experiência do usuário, estou construindo
+                            minha base técnica enquanto exploro como equilibrar funcionalidade com estética moderna,
+                            sempre visando criar soluções que realmente ajudem as pessoas.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="projetos">
+            <article>
+                <h2>Meus Projetos</h2>
+                <p>Conheça alguns dos projetos que desenvolvi durante meus estudos, aplicando os conhecimentos
+                    adquiridos e explorando diferentes tecnologias e técnicas de desenvolvimento.</p>
+
+                <button id="toggleProjetos" class="btn-toggle">
+                    Ver projetos
+                </button>
+
+                <div class="projetos-grid" id="listaProjetos">
+                    <div class="projeto-card">
+                        <h3>Projeto Android</h3>
+                        <p>Site informativo sobre o mascote Android com HTML semântico e CSS organizacional.</p>
+                        <a href="https://lucasveigapinheiro.github.io/html-css/exercicios/mini.projeto/android"
+                            target="_blank">Ver projeto →</a>
+                    </div>
+
+                    <div class="projeto-card">
+                        <h3>Projeto Cordel com Parallax</h3>
+                        <p>Página com poesia tradicional brasileira e efeito parallax na rolagem.</p>
+                        <a href="https://lucasveigapinheiro.github.io/html-css/exercicios/desafio.cordel/cordel.html"
+                            target="_blank">Ver projeto →</a>
+                    </div>
+
+                    <div class="projeto-card">
+                        <h3>Landpage Burguer King</h3>
+                        <p>Landing page completa com menu, promoções e galeria para restaurante.</p>
+                        <a href="https://lucasveigapinheiro.github.io/projetobk/landpagebk/burguerk" target="_blank">Ver
+                            projeto →</a>
+                    </div>
+
+                    <div class="projeto-card">
+                        <h3>Formulário de Cadastro</h3>
+                        <p>Formulário interativo com validação e layout moderno para coleta de dados.</p>
+                        <a href="https://lucasveigapinheiro.github.io/html-css/exercicios/exercicios025/formularios002.html"
+                            target="_blank">Ver projeto →</a>
+                    </div>
+
+                    <div class="projeto-card">
+                        <h3>Formulário de Escola</h3>
+                        <p>Sistema de cadastro completo com campos organizados e interface intuitiva.</p>
+                        <a href="https://lucasveigapinheiro.github.io/html-css/exercicios/exercicios025/formularios003.html"
+                            target="_blank">Ver projeto →</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="contato">
+            <article>
+                <h2>Vamos Conversar?</h2>
+                <p>Estou sempre aberto a novas oportunidades de aprendizado e desafios que me ajudem a crescer como
+                    desenvolvedor. Se você tem um projeto em mente, gostaria de compartilhar conhecimentos ou
+                    simplesmente trocar ideias sobre tecnologia, não hesite em me contatar!</p>
+                <p>Como estudante em formação, estou em busca de experiências que me permitam aplicar e expandir minhas
+                    habilidades. Vamos aprender e crescer juntos no mundo do desenvolvimento web!</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 <a href="https://github.com/lucasveigapinheiro" target="_blank">Lucas Veiga Pinheiro.</a> Todos
+            os direitos
+            reservados.</p>
+        <p>Desenvolvido com ❤️ e muita energia</p>
+    </footer>
+
+    <script src="js/menu-fixo.js"></script>
+    <script src="js/projetos-interativos.js"></script>
+
+    <script>
+        const botao = document.getElementById('toggleProjetos');
+        const projetos = document.getElementById('listaProjetos');
+
+        botao.addEventListener('click', () => {
+            projetos.classList.toggle('ativo');
+            botao.textContent = projetos.classList.contains('ativo') ? 'Ocultar projetos' : 'Ver projetos';
+        });
+    </script>
+
+</body>
+
+</html>
