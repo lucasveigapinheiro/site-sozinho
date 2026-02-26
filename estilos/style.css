@@ -43,10 +43,10 @@ header #menu {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 15px 0;
+    padding: 12px 0;
     transition: all 0.3s ease;
     border-radius: 50px;
-    max-width: 500px;
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -63,18 +63,18 @@ header #menu.menu-fixo {
 header #menu ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 15px;
 }
 
 header #menu ul li a {
     color: var(--cor2);
     text-decoration: none;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: 25px;
     transition: all 0.3s ease;
     position: relative;
     font-weight: 500;
-    font-size: 0.95em;
+    font-size: 0.9em;
 }
 
 header #menu ul li a:hover {
@@ -471,4 +471,15 @@ footer a:hover {
 
 .btn-toggle:active::before {
     left: 100%;
+}
+
+img {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+    gap: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
 }
