@@ -2,7 +2,7 @@
 // ESTILOS MOBILE - RESPONSIVO
 // ========================================== */
 
-@media (max-width: 593px) {
+@media (max-width: 630px) {
 
     /* Header responsivo */
     header {
@@ -27,7 +27,7 @@
         border-radius: 25px;
         max-width: 320px;
         margin: 15px auto 0;
-        font-size: 0.9em;
+        font-size: 1em;
     }
 
     header #menu ul {
