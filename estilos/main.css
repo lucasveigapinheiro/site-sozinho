@@ -1,0 +1,85 @@
+/* ==========================================
+// MAIN CSS - CONTEÚDO PRINCIPAL
+// ========================================== */
+
+main {
+    background: linear-gradient(135deg, var(--cor1) 0%, #ffffff 100%);
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+section {
+    padding: 60px 40px;
+    margin: 0;
+    text-align: center;
+    transition: all 0.5s ease;
+    position: relative;
+    border-radius: 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section>div.portifolio {
+    text-align: left;
+    align-items: flex-start;
+}
+
+section.destacada {
+    background: linear-gradient(135deg, rgba(144, 174, 191, 0.1) 0%, rgba(209, 221, 228, 0.2) 100%);
+    box-shadow: 0 4px 20px rgba(16, 46, 64, 0.1);
+    transform: scale(1.02);
+}
+
+section.destacada::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--cor3), var(--cor4), var(--cor3));
+    border-radius: 12px;
+    z-index: -1;
+    animation: brilhoAnimado 2s ease-in-out infinite;
+}
+
+@keyframes brilhoAnimado {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.01);
+    }
+}
+
+section h2 {
+    color: var(--cor2);
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+section p {
+    color: var(--cor3);
+    font-size: 1.2em;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+    font-weight: 400;
+}
+
+section p:last-child {
+    margin-bottom: 0;
+}

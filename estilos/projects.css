@@ -1,0 +1,135 @@
+/* ==========================================
+// PROJECTS CSS - SEÇÃO DE PROJETOS
+// ========================================== */
+
+.portifolio {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 50px;
+    text-align: left;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    max-width: none;
+    font-weight: 400;
+    padding-left: 20px;
+    border-left: 3px solid var(--cor4);
+    background: linear-gradient(90deg, rgba(87, 126, 149, 0.05) 0%, transparent 100%);
+    padding: 15px 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+.portifolio a {
+    color: var(--cor3);
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+/* Grid de projetos */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.projetos-grid.ativo {
+    opacity: 1;
+    max-height: 2000px;
+}
+
+.projeto-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(16, 46, 64, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(16, 46, 64, 0.2);
+
+}
+
+.projeto-card h3 {
+    color: var(--cor3);
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.projeto-card p {
+    color: var(--cor3);
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.projeto-card a {
+    color: var(--cor2);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.projeto-card a:hover {
+    color: var(--cor4);
+}
+
+/* Botão toggle */
+.btn-toggle {
+    background: linear-gradient(135deg, var(--cor3) 0%, var(--cor4) 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(16, 46, 64, 0.2);
+}
+
+.btn-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 46, 64, 0.3);
+}
+
+.btn-toggle:active {
+    transform: translateY(0);
+}
+
+/* Botão expandir cards */
+.botao-expandir {
+    background: none;
+    border: 1px solid var(--cor3);
+    color: var(--cor3);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    display: none;
+    align-items: center;
+    gap: 5px;
+}
+
+.botao-expandir:hover {
+    background: var(--cor3);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.projeto-card.expandido {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+    box-shadow: 0 12px 35px rgba(16, 46, 64, 0.15);
+}

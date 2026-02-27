@@ -1,0 +1,51 @@
+/* ==========================================
+// ABOUT CSS - SEÇÃO SOBRE MIM
+// ========================================== */
+
+.sobre-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sobre-imagem {
+    flex: 0 0 200px;
+    text-align: center;
+}
+
+.sobre-imagem img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--cor3);
+    box-shadow: 0 8px 25px rgba(16, 46, 64, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.sobre-imagem img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 35px rgba(16, 46, 64, 0.25);
+}
+
+.sobre-texto {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.sobre-texto p {
+    color: var(--cor3);
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    max-width: none;
+    font-weight: 400;
+}
+
+.sobre-texto p:last-child {
+    margin-bottom: 0;
+}

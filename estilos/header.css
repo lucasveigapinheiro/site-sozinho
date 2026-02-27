@@ -1,0 +1,89 @@
+/* ==========================================
+// HEADER CSS - ESTILOS DO CABEÇALHO
+// ========================================== */
+
+header {
+    background: linear-gradient(135deg, var(--cor1) 0%, var(--cor2) 100%);
+}
+
+header,
+h1 {
+    color: white;
+    padding: 40px 95px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header #subtitilo {
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-top: 15px;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+header #menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 13px 0;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header #menu.menu-fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+header #menu ul {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+}
+
+header #menu ul li a {
+    color: var(--cor2);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+header #menu ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+header #menu ul li a.ativo {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+header #menu ul li a.ativo::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: white;
+    border-radius: 50%;
+}
