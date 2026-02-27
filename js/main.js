@@ -72,9 +72,29 @@ menuLinks.forEach(link => {
         const id = link.getAttribute('href');
 
         if (id === '#') {
+            // Animação especial para o início
+            const header = document.querySelector('header');
+            const h1 = document.querySelector('header h1');
+
+            // Sobrepor header ligeiramente
+            header.style.zIndex = '1001';
+            header.style.transform = 'translateY(-10px)';
+            header.style.transition = 'transform 0.4s ease';
+
+            // Scroll suave
             window.scrollTo({ top: 0, behavior: 'smooth' });
+
             // Destacar primeira section
             destacarSection(sections[0]);
+
+            // Restaurar posição após animação
+            setTimeout(() => {
+                header.style.transform = 'translateY(0)';
+                setTimeout(() => {
+                    header.style.zIndex = '';
+                    header.style.transition = '';
+                }, 400);
+            }, 200);
         } else {
             const section = document.querySelector(id);
             if (section) {
@@ -96,9 +116,9 @@ window.addEventListener('load', atualizarMenuAtivo);
 // ==========================================
 // PROJETOS INTERATIVOS
 // ==========================================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const projetoCards = document.querySelectorAll('.projeto-card');
-    
+
     projetoCards.forEach(card => {
         // Criar botão de expandir/recolher
         const botaoExpandir = document.createElement('button');
@@ -106,11 +126,11 @@ document.addEventListener('DOMContentLoaded', function() {
         botaoExpandir.innerHTML = '▼ Ver mais';
         botaoExpandir.setAttribute('aria-label', 'Expandir informações do projeto');
         botaoExpandir.setAttribute('aria-expanded', 'false');
-        
+
         // Encontrar o elemento p (descrição)
         const descricao = card.querySelector('p');
         const descricaoOriginal = descricao.textContent;
-        
+
         // Limitar descrição inicialmente
         const limiteCaracteres = 100;
         if (descricaoOriginal.length > limiteCaracteres) {
@@ -119,11 +139,11 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             botaoExpandir.style.display = 'none';
         }
-        
+
         // Adicionar evento de clique
-        botaoExpandir.addEventListener('click', function() {
+        botaoExpandir.addEventListener('click', function () {
             const estaExpandido = this.getAttribute('aria-expanded') === 'true';
-            
+
             if (estaExpandido) {
                 // Recolher
                 descricao.textContent = descricaoOriginal.substring(0, limiteCaracteres) + '...';
@@ -138,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.classList.add('expandido');
             }
         });
-        
+
         // Inserir botão após o parágrafo
         descricao.parentNode.insertBefore(botaoExpandir, descricao.nextSibling);
     });
